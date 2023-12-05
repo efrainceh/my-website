@@ -17,11 +17,13 @@ export default function Home() {
           text={"Home"}
         />
       </div>
-      {/* <div className="grid grid-rows-2 grid-cols-2 place-items-center">
-        {projects.map((project: any) => (
-          <ProjectBox key={project.title} project={project} />
-        ))}
-      </div> */}
+      {
+        <div className="grid grid-rows-2 grid-cols-2 place-items-center">
+          {projects.map((project: any) => (
+            <ProjectBox key={project.title} project={project} />
+          ))}
+        </div>
+      }
     </div>
   );
 }

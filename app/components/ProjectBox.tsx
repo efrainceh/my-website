@@ -24,7 +24,9 @@ export default function ProjectBox({ project }: Props) {
       <div className="flex w-[300px] h-[150px] justify-center items-center relative">
         <Image src={project.image} fill alt="image of project" />
       </div>
-      <ReactMarkdown className="text-justify p-4" children={project.content} />
+      <ReactMarkdown className="text-justify p-4">
+        {project.content}
+      </ReactMarkdown>
     </div>
   );
 }
