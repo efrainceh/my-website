@@ -18,6 +18,7 @@ export function getProjectContent(slug: string) {
   const matterResult = matter(content);
   // const processedContent = remark().use(html).process(matterResult.content);
   // const contentHtml = processedContent.toString();
+
   return {
     title: matterResult.data.title,
     github: matterResult.data.github,

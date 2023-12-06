@@ -23,7 +23,7 @@ export default function Icon({
       ) : (
         <ExternalLink href={href} target={target} iconName={iconName} />
       )}
-      <p className="text-sm text-white opacity-0 group-hover:opacity-100">
+      <p className="text-sm font-bold opacity-0 group-hover:opacity-100">
         {text}
       </p>
     </div>

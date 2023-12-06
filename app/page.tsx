@@ -6,11 +6,11 @@ export default function Home() {
   const slugs = getProjectMetadata();
   const projects = slugs.map((slug) => getProjectContent(slug));
   return (
-    <div className="grid grid-cols-2 place-items-center min-h-screen">
-      <div className="w-1/2">
+    <div className="grid grid-cols-1 place-items-center overflow-auto min-h-screen min-w-screen md:grid-cols-2">
+      <div>
         <ProfileBox />
       </div>
-      <div className="w-1/2">
+      <div>
         <ProjectCarousel projects={projects} />
       </div>
     </div>

@@ -8,7 +8,7 @@ export default function Home() {
   const projects = slugs.map((slug) => getProjectContent(slug));
   return (
     <div>
-      <div className="p-4">
+      <div className="ml-4 mt-4">
         <Icon
           internal={true}
           href={"/"}
@@ -18,7 +18,7 @@ export default function Home() {
         />
       </div>
       {
-        <div className="grid grid-rows-2 grid-cols-2 place-items-center">
+        <div className="grid grid-cols-1 place-items-center min-h-screen overflow-auto md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project: any) => (
             <ProjectBox key={project.title} project={project} />
           ))}
