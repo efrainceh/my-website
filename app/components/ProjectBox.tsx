@@ -2,11 +2,8 @@
 
 import React from "react";
 // import Image from "next/image";
-import ReactMarkdown from "react-markdown";
-import { SiGithub } from "react-icons/si";
-import Icon from "./Icon";
-
-import { Button, Badge, Image, Group, Card, Text } from "@mantine/core";
+import { FaCircle } from "react-icons/fa";
+import { Image, Card, Text, Group } from "@mantine/core";
 
 interface Props {
   project: any;
@@ -14,42 +11,49 @@ interface Props {
 
 export default function ProjectBox({ project }: Props) {
   return (
-    <Card
-      shadow="sm"
-      padding="lg"
-      radius="md"
-      withBorder
-      className="w-[320px] h-[416px] my-2"
-    >
-      <Group gap="sm" justify="center">
-        <div className="pb-4">
-          <Text size="xl" fw={700}>
+    <a href={project.github} target="_blank">
+      <Card
+        shadow="sm"
+        padding="lg"
+        radius="md"
+        withBorder
+        className="w-[320px] h-[416px] my-2"
+      >
+        <div className="pb-2">
+          <Text
+            size="xl"
+            fw={700}
+            ta="center"
+            variant="gradient"
+            gradient={{ from: "rgba(87, 29, 222, 1)", to: "blue", deg: 52 }}
+          >
             {project.title}
           </Text>
         </div>
-        <Icon
-          internal={false}
-          href={project.github}
-          target={"_blank"}
-          iconName={<SiGithub size="1.1em" />}
-          text={"Code"}
-        />
-      </Group>
-      {String(project.image) && (
-        <Image
-          src={project.image}
-          h={150}
-          w="auto"
-          fit="contain"
-          alt="image of project"
-        />
-      )}
-      <Text size="sm" c="dimmed" className="flex-1 text-justify">
-        {project.content}
-      </Text>
-      <Card.Section>
-        <Image src="images/A_black_image.jpeg" h={50} alt="black image" />
-      </Card.Section>
-    </Card>
+        {String(project.image) && (
+          <Image
+            src={project.image}
+            h={150}
+            w="auto"
+            fit="contain"
+            alt="image of project"
+          />
+        )}
+        <Text size="sm" c="dimmed" className="text-justify">
+          {project.content}
+        </Text>
+        <div className="flex-1 align-top mt-2">
+          <Group>
+            <FaCircle />
+            <Text size="sm" fw={700}>
+              {project.language}
+            </Text>
+          </Group>
+        </div>
+        <Card.Section>
+          <Image src="images/A_black_image.jpeg" h={50} alt="black image" />
+        </Card.Section>
+      </Card>
+    </a>
   );
 }

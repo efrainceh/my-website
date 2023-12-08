@@ -1,7 +1,8 @@
 ---
 title: "Kmer Alignment Tool"
-github: "https://github.com/efrainceh/SnakeGame"
+github: "https://github.com/efrainceh/KAT"
 image_path: ""
+language: "C++"
 ---
 
-Java implementation of the snake game. As a single player you can play Adventure mode (5 maps) or versus a NPC. There is also the option to play against another player
+The Kmer Alignment Tool takes DNA genome sequences, choppes them up into kmers, and then aligns those kmers to Reference DNA files. For the alignment it uses a combination of Suffix Arrays and the Burrows-Wheeler Transform.

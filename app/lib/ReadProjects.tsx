@@ -1,7 +1,5 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 
 export function getProjectMetadata() {
   const folder = "projects/";
@@ -16,13 +14,12 @@ export function getProjectContent(slug: string) {
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf-8");
   const matterResult = matter(content);
-  // const processedContent = remark().use(html).process(matterResult.content);
-  // const contentHtml = processedContent.toString();
 
   return {
     title: matterResult.data.title,
     github: matterResult.data.github,
     image: matterResult.data.image_path,
+    language: matterResult.data.language,
     content: matterResult.content,
   };
 }
