@@ -4,6 +4,7 @@ import React from "react";
 // import Image from "next/image";
 import { FaCircle } from "react-icons/fa";
 import { Image, Card, Text, Group } from "@mantine/core";
+import LanguageCircle from "./LanguageCircle";
 
 interface Props {
   project: any;
@@ -43,12 +44,7 @@ export default function ProjectBox({ project }: Props) {
           {project.content}
         </Text>
         <div className="flex-1 align-top mt-2">
-          <Group>
-            <FaCircle />
-            <Text size="sm" fw={700}>
-              {project.language}
-            </Text>
-          </Group>
+          <LanguageCircle language={project.language} />
         </div>
         <Card.Section>
           <Image src="images/A_black_image.jpeg" h={50} alt="black image" />
