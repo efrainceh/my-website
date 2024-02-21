@@ -13,7 +13,7 @@ export default function Home() {
         <LanguageRating language="Python" rating={3} />
         <LanguageRating language="Java" rating={2} />
         <LanguageRating language="C++" rating={2} />
-        <LanguageRating language="Typescript" rating={1} />
+        <LanguageRating language="Typescript" rating={2} />
       </div>
       <div className="ml-7">
         <ProjectCarousel projects={projects} />
