@@ -23,7 +23,7 @@ export default function IconBar() {
   const icons: React.JSX.Element[] = [];
   for (var ix = 0; ix < hrefs.length; ix++) {
     icons.push(
-      <h1 key={texts[ix]}>texts[ix]</h1>
+      <h1 key={ix}>texts[ix]</h1>
       // <Icon
       //   key={texts[ix]}
       //   internal={internal[ix]}
