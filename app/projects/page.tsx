@@ -1,14 +1,20 @@
-import Icon from "../components/Icon";
+import Icon from "@/app/components/profile/Icon";
+import ProjectBox from "@/app/components/project/ProjectBox";
 import { FaHome } from "react-icons/fa";
-import ProjectBox from "../components/ProjectBox";
 import { getProjectContent, getProjectMetadata } from "../lib/ReadProjects";
+import * as styles from "./styles";
 
 export default function Home() {
   const slugs = getProjectMetadata();
-  const projects = slugs.map((slug) => getProjectContent(slug));
+  const projectData = slugs.map((slug) => getProjectContent(slug));
+
+  const projects: React.JSX.Element[] = projectData.map((project: any) => (
+    <ProjectBox key={project.title} project={project} />
+  ));
+
   return (
-    <div>
-      <div className="ml-4 mt-4">
+    <>
+      <div className={styles.iconMargin}>
         <Icon
           internal={true}
           href={"/"}
@@ -17,13 +23,7 @@ export default function Home() {
           text={"Home"}
         />
       </div>
-      {
-        <div className="grid grid-cols-1 place-items-center min-h-screen overflow-auto md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project: any) => (
-            <ProjectBox key={project.title} project={project} />
-          ))}
-        </div>
-      }
-    </div>
+      <div className={styles.grid}>{projects}</div>
+    </>
   );
 }

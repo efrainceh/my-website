@@ -1,11 +1,12 @@
 import React from "react";
-import IconBar from "./IconBar";
 import Image from "next/image";
+import IconBar from "./IconBar";
+import * as styles from "./styles";
 
 export default function ProfileBox() {
   return (
-    <>
-      <div className="flex justify-center items-center">
+    <div className={styles.profileBox}>
+      <div className={styles.image}>
         <Image
           src="/images/avatar.png"
           width={300}
@@ -13,12 +14,8 @@ export default function ProfileBox() {
           alt="image of my avatar"
         />
       </div>
-      <div className="py-2">
-        <h1 className="text-white text-4xl font-bold text-center">
-          Efrain Ceh Pavia
-        </h1>
-      </div>
+      <h1 className={styles.name}>Efrain Ceh Pavia</h1>
       <IconBar />
-    </>
+    </div>
   );
 }

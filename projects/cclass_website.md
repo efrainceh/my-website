@@ -1,6 +1,6 @@
 ---
 title: "CCLASS"
-github: "https://cclass-nine.vercel.app/"
+github: "https://www.cclass-population.one"
 image_path: "/images/main.jpeg"
 language: "TypeScript, React/NextJs"
 ---

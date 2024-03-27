@@ -1,9 +1,9 @@
 "use client";
-
 import { useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import ProjectBox from "./ProjectBox";
+import * as styles from "./styles";
 
 interface Props {
   projects: any;
@@ -11,8 +11,13 @@ interface Props {
 
 export default function ProjectCarousel({ projects }: Props) {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const slides = projects.map((project: any) => (
+    <Carousel.Slide key={project.title}>
+      <ProjectBox project={project} carousel={true} />
+    </Carousel.Slide>
+  ));
   return (
-    <div className="w-[340px]">
+    <div className={styles.carousel}>
       <Carousel
         height="100%"
         loop
@@ -22,11 +27,7 @@ export default function ProjectCarousel({ projects }: Props) {
         onMouseEnter={autoplay.current.stop}
         onMouseLeave={autoplay.current.reset}
       >
-        {projects.map((project: any) => (
-          <Carousel.Slide key={project.title}>
-            <ProjectBox project={project} />
-          </Carousel.Slide>
-        ))}
+        {slides}
       </Carousel>
     </div>
   );
