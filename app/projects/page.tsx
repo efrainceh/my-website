@@ -9,7 +9,7 @@ export default function Home() {
   const projectData = slugs.map((slug) => getProjectContent(slug));
 
   const projects: React.JSX.Element[] = projectData.map((project: any) => (
-    <ProjectBox key={project.title} project={project} />
+    <ProjectBox key={project.title} project={project} carousel={false} />
   ));
 
   return (
