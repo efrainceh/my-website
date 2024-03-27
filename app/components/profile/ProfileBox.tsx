@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import IconBar from "./IconBar";
+// import IconBar from "./IconBar";
 import * as styles from "./styles";
 
 export default function ProfileBox() {
@@ -15,7 +15,7 @@ export default function ProfileBox() {
         />
       </div>
       <h1 className={styles.name}>Efrain Ceh Pavia</h1>
-      <IconBar />
+      {/* <IconBar /> */}
     </div>
   );
 }
