@@ -21,7 +21,7 @@ export default function IconBar() {
   const texts = ["LinkedIn", "Github", "Resume", "Projects"];
 
   const icons: React.JSX.Element[] = [];
-  for (let ix = 0; ix < hrefs.length; ix++) {
+  for (var ix = 0; ix < hrefs.length; ix++) {
     icons.push(
       <h1 key={texts[ix]}>texts[ix]</h1>
       // <Icon
@@ -34,5 +34,6 @@ export default function IconBar() {
       // />
     );
   }
+
   return <div className={styles.iconBar}>{icons}</div>;
 }
