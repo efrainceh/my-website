@@ -23,14 +23,15 @@ export default function IconBar() {
   const icons: React.JSX.Element[] = [];
   for (let ix = 0; ix < hrefs.length; ix++) {
     icons.push(
-      <Icon
-        key={texts[ix]}
-        internal={internal[ix]}
-        href={hrefs[ix]}
-        target={targets[ix]}
-        iconName={iconNames[ix]}
-        text={texts[ix]}
-      />
+      <React.Fragment key={texts[ix]}>
+        <Icon
+          internal={internal[ix]}
+          href={hrefs[ix]}
+          target={targets[ix]}
+          iconName={iconNames[ix]}
+          text={texts[ix]}
+        />
+      </React.Fragment>
     );
   }
   return <div className={styles.iconBar}>{icons}</div>;
