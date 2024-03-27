@@ -34,5 +34,5 @@ export default function IconBar() {
     );
   }
 
-  return <div className={styles.iconBar}></div>;
+  return <div className={styles.iconBar}>{icons}</div>;
 }
