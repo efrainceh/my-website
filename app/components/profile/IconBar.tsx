@@ -20,7 +20,7 @@ export default function IconBar() {
   ];
   const texts = ["LinkedIn", "Github", "Resume", "Projects"];
 
-  const icons: React.JSX.Element[] = [];
+  const icons = [];
   for (let ix = 0; ix < hrefs.length; ix++) {
     icons.push(
       <Icon
