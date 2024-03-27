@@ -20,17 +20,18 @@ export default function IconBar() {
   ];
   const texts = ["LinkedIn", "Github", "Resume", "Projects"];
 
-  const icons = [];
+  const icons: React.JSX.Element[] = [];
   for (let ix = 0; ix < hrefs.length; ix++) {
     icons.push(
-      <Icon
-        key={texts[ix]}
-        internal={internal[ix]}
-        href={hrefs[ix]}
-        target={targets[ix]}
-        iconName={iconNames[ix]}
-        text={texts[ix]}
-      />
+      <h1 key={texts[ix]}>texts[ix]</h1>
+      // <Icon
+      //   key={texts[ix]}
+      //   internal={internal[ix]}
+      //   href={hrefs[ix]}
+      //   target={targets[ix]}
+      //   iconName={iconNames[ix]}
+      //   text={texts[ix]}
+      // />
     );
   }
   return <div className={styles.iconBar}>{icons}</div>;
