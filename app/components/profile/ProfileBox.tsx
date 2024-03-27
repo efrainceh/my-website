@@ -15,7 +15,7 @@ export default function ProfileBox() {
         />
       </div>
       <h1 className={styles.name}>Efrain Ceh Pavia</h1>
-      <IconBar />
+      {/* <IconBar /> */}
     </div>
   );
 }
