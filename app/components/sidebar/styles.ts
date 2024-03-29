@@ -40,6 +40,7 @@ export const showBtn = classNames(
   "bg-slate-100",
   "mt-4",
   "ml-4",
+  "z-20",
   "xs:text-base",
   "xs:w-[150px]"
 );
