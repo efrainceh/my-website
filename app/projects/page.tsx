@@ -19,7 +19,7 @@ export default function Home() {
           internal={true}
           href={"/"}
           target={"_self"}
-          iconName={<FaHome size="2em" />}
+          iconName={<FaHome className={styles.iconSize} />}
           text={"Home"}
         />
       </div>

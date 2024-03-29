@@ -33,7 +33,7 @@ export default function ProjectBox({ project, carousel }: Props) {
         </Text>
         {image}
         <div className={styles.text}>
-          <Text size="sm">{project.content}</Text>
+          <p>{project.content}</p>
           <LanguageCircle language={project.language} />
         </div>
         <Card.Section>

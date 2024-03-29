@@ -13,10 +13,10 @@ export default function IconBar() {
   ];
   const targets = ["_blank", "_blank", "_blank", "_self"];
   const iconNames = [
-    <SiLinkedin key={0} size="2em" />,
-    <SiGithub key={1} size="2em" />,
-    <SiReaddotcv key={2} size="2em" />,
-    <SiFiles key={3} size="2em" />,
+    <SiLinkedin key={0} className={styles.iconSize} />,
+    <SiGithub key={1} className={styles.iconSize} />,
+    <SiReaddotcv key={2} className={styles.iconSize} />,
+    <SiFiles key={3} className={styles.iconSize} />,
   ];
   const texts = ["LinkedIn", "Github", "Resume", "Projects"];
 

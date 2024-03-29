@@ -12,4 +12,6 @@ export const grid = classNames(
   "2xl:grid-cols-3"
 );
 
-export const iconMargin = classNames("pt-4");
+export const iconMargin = classNames("ml-[125px] xs:ml-[200px]", "pt-4");
+
+export const iconSize = classNames("text-2xl", "xs:text-4xl");

@@ -18,3 +18,13 @@ export const profile = classNames(
   "items-center",
   "justify-center"
 );
+
+export const body = classNames(
+  "bg-gradient-to-r",
+  "from-indigo-500",
+  "via-purple-500",
+  "to-blue-500",
+  "min-h-screen"
+);
+
+export const sidebar = classNames("absolute");

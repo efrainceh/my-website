@@ -9,8 +9,9 @@ export default function ProfileBox() {
       <div className={styles.image}>
         <Image
           src="/images/avatar.png"
-          width={300}
-          height={300}
+          priority
+          fill
+          sizes="(max-width: 450px) 80vw, 50vw"
           alt="image of my avatar"
         />
       </div>

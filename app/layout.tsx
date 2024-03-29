@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import SideBar from "./components/sidebar/sidebar";
+import * as styles from "./styles";
 
 export const metadata: Metadata = {
   title: "Efrain Ceh Pavia",
@@ -19,8 +21,11 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 min-h-screen">
-        <MantineProvider>{children}</MantineProvider>
+      <body className={styles.body}>
+        <MantineProvider>
+          <SideBar />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
