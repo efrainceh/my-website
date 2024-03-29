@@ -13,10 +13,12 @@ export default function SideBar() {
 
   return (
     <div className="flex">
-      <button onClick={handleCollapsedChange} className={styles.showBtn}>
-        Contact Me
-        <FaAngleDoubleRight />
-      </button>
+      <div className={styles.showBtn}>
+        <h1>Contact Me</h1>
+        <button onClick={handleCollapsedChange}>
+          <FaAngleDoubleRight />
+        </button>
+      </div>
       <div className={styles.stickySidebar}>
         <Sidebar
           collapsed={collapsed}
