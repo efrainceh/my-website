@@ -23,7 +23,9 @@ export default function RootLayout({
       </head>
       <body className={styles.body}>
         <MantineProvider>
-          <SideBar />
+          <div className="absolute">
+            <SideBar />
+          </div>
           {children}
         </MantineProvider>
       </body>
