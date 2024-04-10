@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function ProjectCarousel({ projects }: Props) {
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
+  const autoplay = useRef(Autoplay({ delay: 1000 }));
   const slides = projects.map((project: any) => (
     <Carousel.Slide key={project.title}>
       <ProjectBox project={project} carousel={true} />

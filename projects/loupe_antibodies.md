@@ -1,6 +1,6 @@
 ---
 title: "Loupe Antibodies"
-github: "https://github.com/efrainceh/SnakeGame"
+github: "https://github.com/efrainceh/loupe-antibodies"
 image_path: ""
 language: "Python"
 ---
